@@ -1,0 +1,96 @@
+---
+const { slug } = Astro.params;
+
+// Fazendo a requisição para obter o post pelo slug
+const response = await fetch(`https://www.globalization-partners.com/wp-json/wp/v2/posts?slug=${slug}&_embed`);
+const posts = await response.json();
+
+// Verifica se o post existe
+if (!posts || posts.length === 0) {
+  return Astro.redirect('/404');
+}
+
+const post = posts[0];
+
+// Log do post completo para depuração
+console.log('Post completo:', post);
+
+// Tenta obter o conteúdo do post
+let postContent = post.content?.rendered || post._embedded?.['wp:featuredmedia']?.[0]?.description || '';
+
+// Se o conteúdo não estiver disponível, tenta obter de campos ACF
+if (!postContent && post.acf) {
+  const possibleFields = ['content', 'post_content', 'main_content', 'body'];
+  for (const field of possibleFields) {
+    if (post.acf[field]) {
+      postContent = post.acf[field];
+      break;
+    }
+  }
+}
+
+// Se ainda não houver conteúdo, define uma mensagem padrão
+if (!postContent) {
+  postContent = '';
+}
+
+// Extraindo a descrição meta dos dados Yoast SEO
+const metaDescription = post.yoast_head_json?.description || '';
+
+// Extraindo o título e a descrição do Yoast SEO
+const yoastTitle = post.yoast_head_json?.title || 'Título não disponível';
+const yoastDescription = post.yoast_head_json?.description || 'Descrição não disponível';
+
+// Logs para depuração
+console.log('Título Yoast:', yoastTitle);
+console.log('Descrição Yoast:', yoastDescription);
+---
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{yoastTitle}</title>
+    <meta name="description" content={metaDescription} />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .post-content img {
+        max-width: 100%;
+        height: auto;
+      }
+      .excerpt {
+        font-size: 1em;
+        color: #666;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>{yoastTitle}</h1>
+        <!-- Exibe o título do Yoast -->
+        <p class="excerpt">{yoastDescription}</p>
+        <!-- Exibe a descrição do Yoast -->
+        <div class="post-content" set:html={postContent} />
+      </article>
+    </main>
+    <footer>
+      <a href="/test">Voltar para a lista de posts</a>
+    </footer>
+
+    <script define:vars={{ post, postContent, yoastTitle, yoastDescription }}>
+      console.log('Post data (client-side):', post);
+      console.log('Post content (client-side):', postContent);
+      console.log('Título Yoast (client-side):', yoastTitle);
+      console.log('Descrição Yoast (client-side):', yoastDescription);
+    </script>
+  </body>
+</html>
