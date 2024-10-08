@@ -7,19 +7,19 @@ export const headerData = {
       links: [
         {
           text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          href: '#', // Link desativado
         },
         {
           text: 'Startup',
-          href: getPermalink('/homes/startup'),
+          href: '#', // Link desativado
         },
         {
           text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
+          href: '#', // Link desativado
         },
         {
           text: 'Personal',
-          href: getPermalink('/homes/personal'),
+          href: '#', // Link desativado
         },
       ],
     },
@@ -28,31 +28,31 @@ export const headerData = {
       links: [
         {
           text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          href: '#', // Link desativado
         },
         {
           text: 'Services',
-          href: getPermalink('/services'),
+          href: '#', // Link desativado
         },
         {
           text: 'Pricing',
-          href: getPermalink('/pricing'),
+          href: '#', // Link desativado
         },
         {
           text: 'About us',
-          href: getPermalink('/about'),
+          href: '#', // Link desativado
         },
         {
           text: 'Contact',
-          href: getPermalink('/contact'),
+          href: '#', // Link desativado
         },
         {
           text: 'Terms',
-          href: getPermalink('/terms'),
+          href: '#', // Link desativado
         },
         {
           text: 'Privacy policy',
-          href: getPermalink('/privacy'),
+          href: '#', // Link desativado
         },
       ],
     },
@@ -61,27 +61,27 @@ export const headerData = {
       links: [
         {
           text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
+          href: '#', // Link desativado
         },
         {
           text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
+          href: '#', // Link desativado
         },
         {
           text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
+          href: '#', // Link desativado
         },
         {
           text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
+          href: '#', // Link desativado
         },
         {
           text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
+          href: '#', // Link desativado
         },
         {
           text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
+          href: '#', // Link desativado
         },
       ],
     },
@@ -90,32 +90,32 @@ export const headerData = {
       links: [
         {
           text: 'Blog List',
-          href: getBlogPermalink(),
+          href: '#', // Link desativado
         },
         {
           text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          href: '#', // Link desativado
         },
         {
           text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
+          href: '#', // Link desativado
         },
         {
           text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
+          href: '#', // Link desativado
         },
         {
           text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
+          href: '#', // Link desativado
         },
       ],
     },
     {
       text: 'Widgets',
-      href: '#',
+      href: '#', // Link desativado
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Posts List', href: '#', target: '' }], // Link desativado
 };
 
 export const footerData = {
@@ -123,61 +123,57 @@ export const footerData = {
     {
       title: 'Product',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'Features', href: '#' }, // Link desativado
+        { text: 'Security', href: '#' }, // Link desativado
+        { text: 'Team', href: '#' }, // Link desativado
+        { text: 'Enterprise', href: '#' }, // Link desativado
+        { text: 'Customer stories', href: '#' }, // Link desativado
+        { text: 'Pricing', href: '#' }, // Link desativado
+        { text: 'Resources', href: '#' }, // Link desativado
       ],
     },
     {
       title: 'Platform',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: 'Developer API', href: '#' }, // Link desativado
+        { text: 'Partners', href: '#' }, // Link desativado
+        { text: 'Atom', href: '#' }, // Link desativado
+        { text: 'Electron', href: '#' }, // Link desativado
+        { text: 'AstroWind Desktop', href: '#' }, // Link desativado
       ],
     },
     {
       title: 'Support',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'Docs', href: '#' }, // Link desativado
+        { text: 'Community Forum', href: '#' }, // Link desativado
+        { text: 'Professional Services', href: '#' }, // Link desativado
+        { text: 'Skills', href: '#' }, // Link desativado
+        { text: 'Status', href: '#' }, // Link desativado
       ],
     },
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'About', href: '#' }, // Link desativado
+        { text: 'Blog', href: '#' }, // Link desativado
+        { text: 'Careers', href: '#' }, // Link desativado
+        { text: 'Press', href: '#' }, // Link desativado
+        { text: 'Inclusion', href: '#' }, // Link desativado
+        { text: 'Social Impact', href: '#' }, // Link desativado
+        { text: 'Shop', href: '#' }, // Link desativado
       ],
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Terms', href: '#' }, // Link desativado
+    { text: 'Privacy Policy', href: '#' }, // Link desativado
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' }, // Link desativado
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' }, // Link desativado
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' }, // Link desativado
+    { ariaLabel: 'RSS', icon: 'tabler:rss', href: '#' }, // Link desativado
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
   ],
-  footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
-  `,
 };
